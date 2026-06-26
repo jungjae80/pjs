@@ -1,0 +1,15 @@
+<textarea id="code" style="width:100%;height:500px;">
+<!-- HTML 코드 전체 -->
+</textarea>
+
+<button onclick="copyCode()">📋 전체 복사</button>
+
+<script>
+function copyCode() {
+    const text = document.getElementById("code");
+    text.select();
+    text.setSelectionRange(0, 999999);
+    navigator.clipboard.writeText(text.value);
+    alert("복사되었습니다.");
+}
+</script>
